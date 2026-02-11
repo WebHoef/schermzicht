@@ -147,6 +147,15 @@ body {
   justify-content: center;
 }
 
+.form-honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 @media (max-width: 991.98px) {
   .hero-section {
     min-height: auto;
