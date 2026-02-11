@@ -156,7 +156,7 @@ if (sz_method_is_post()) {
               <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="#over-ons">Over Ons</a></li>
               <li class="nav-item"><a class="nav-link" href="#diensten">Diensten</a></li>
-              <li class="nav-item"><a class="nav-link" href="cms.php">CMS</a></li>
+              <li class="nav-item"><a class="nav-link" href="login.php">CMS login</a></li>
               <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
           </div>
