@@ -1,0 +1,130 @@
+:root {
+  --cms-primary: #0b4f8a;
+  --cms-primary-dark: #08385f;
+  --cms-bg: #f2f5fa;
+  --cms-surface: #ffffff;
+  --cms-border: #d0d5dd;
+  --cms-text: #1d2939;
+  --cms-muted: #475467;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--cms-bg);
+  color: var(--cms-text);
+}
+
+.cms-topbar {
+  background-color: var(--cms-surface);
+  border-bottom: 1px solid var(--cms-border);
+}
+
+.logo-placeholder {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--cms-primary), #00a6a6);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.admin-shell {
+  min-height: calc(100vh - 72px);
+}
+
+.sidebar-desktop {
+  width: 280px;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-desktop .nav-link,
+.offcanvas .nav-link {
+  color: inherit;
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  font-weight: 600;
+}
+
+.sidebar-desktop .nav-link:hover,
+.sidebar-desktop .nav-link:focus,
+.offcanvas .nav-link:hover,
+.offcanvas .nav-link:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.sidebar-desktop .nav-link.active {
+  background-color: var(--cms-primary);
+  color: #ffffff;
+}
+
+.content-area {
+  width: 100%;
+}
+
+.section-title {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.section-subtitle {
+  color: var(--cms-muted);
+}
+
+.overview-card,
+.panel-card {
+  border: 1px solid var(--cms-border);
+  border-radius: 14px;
+  background-color: var(--cms-surface);
+  box-shadow: 0 10px 28px rgba(16, 24, 40, 0.06);
+}
+
+.overview-card .metric {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--cms-primary);
+}
+
+.table thead th {
+  color: #344054;
+  font-weight: 700;
+}
+
+.status-pill {
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-active {
+  background-color: rgba(18, 183, 106, 0.15);
+  color: #027a48;
+}
+
+.status-planned {
+  background-color: rgba(46, 144, 250, 0.14);
+  color: #175cd3;
+}
+
+.quick-actions .btn {
+  min-width: 120px;
+}
+
+.cms-footer-note {
+  color: #667085;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 991.98px) {
+  .admin-shell {
+    min-height: auto;
+  }
+}
