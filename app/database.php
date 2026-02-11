@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/bootstrap.php';
+require_once __DIR__ . '/migrations.php';
 
 /**
  * Returns a shared PDO instance with secure defaults.
@@ -10,7 +11,14 @@ require_once __DIR__ . '/bootstrap.php';
 function sz_db(): \PDO
 {
     static $pdo = null;
+    static $migrationsHaveRun = false;
+
     if ($pdo instanceof \PDO) {
+        if (!$migrationsHaveRun) {
+            sz_run_migrations($pdo);
+            $migrationsHaveRun = true;
+        }
+
         return $pdo;
     }
 
@@ -57,6 +65,9 @@ function sz_db(): \PDO
             $exception
         );
     }
+
+    sz_run_migrations($pdo);
+    $migrationsHaveRun = true;
 
     return $pdo;
 }
